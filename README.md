@@ -1,2 +1,1 @@
-# skovash31.github.io
-
+www.gimkit.shop
