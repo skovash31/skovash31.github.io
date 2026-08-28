@@ -199,6 +199,7 @@
     const gamesContainer = document.querySelector("#games");
     const openPageBlankButton = document.querySelector("#open-page-blank");
     const playSelectedButton = document.querySelector("#play-selected");
+    const pressedKeys = new Set();
 
     function openPageInAboutBlank() {
       const pageUrl = window.location.href;
@@ -245,6 +246,10 @@
       window.location.href = gameSelect.value;
     }
 
+    function openPasswordPage() {
+      window.location.href = "secret/password.html";
+    }
+
     gameSelect.innerHTML = games.map((game) => `
       <option value="${game.url}">${game.title}</option>
     `).join("");
@@ -258,6 +263,18 @@
 
     openPageBlankButton.addEventListener("click", openPageInAboutBlank);
     playSelectedButton.addEventListener("click", playSelectedGame);
+
+    window.addEventListener("keydown", (event) => {
+      pressedKeys.add(event.key);
+
+      if (pressedKeys.has("9") && pressedKeys.has("0")) {
+        openPasswordPage();
+      }
+    });
+
+    window.addEventListener("keyup", (event) => {
+      pressedKeys.delete(event.key);
+    });
   </script>
 </body>
 </html>
