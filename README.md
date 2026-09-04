@@ -1,1 +1,1 @@
-www.gimkit.shop
+coolkids.gimkit.shop
