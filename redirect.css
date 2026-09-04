@@ -1,7 +1,7 @@
 <script>
 (function() {
-  const allowedReferrer = "https://coolkidss.gimkit.shop"; // the URL you want to allow
-  const redirectTo = "https://gimkit.shop"; // where to send everyone else
+  const allowedReferrer = "https://coolkids.gimkit.shop"; // the URL you want to allow
+  const redirectTo = "https://www.gimkit.shop"; // where to send everyone else
 
   const referrer = document.referrer;
 
